@@ -1,0 +1,19 @@
+.content-column-content {
+    font-family: Roboto,sans-serif;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0c344b;
+    text-align: left;
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1.25rem;
+        font-family: Open Sans,sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #082333;
+    }
+}
+
+.content-column-content p {
+    color: #0c344b;
+}
