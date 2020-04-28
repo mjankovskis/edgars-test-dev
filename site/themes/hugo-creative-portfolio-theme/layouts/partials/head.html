@@ -10,15 +10,15 @@
 <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/owl.carousel.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/owl.theme.css" | absURL }}">
-{{ $stylesheet := .Site.Data.webpack.my }}
-{{ with $stylesheet.css }}
-<link href="{{ relURL . }}" rel="stylesheet">
-{{ end }}
 <!-- Theme stylesheet, if possible do not edit this stylesheet -->
 {{ with .Site.Params.style }}
   <link href="{{ printf "css/style.%s.css" . | absURL }}" rel="stylesheet" id="theme-stylesheet">
 {{ else }}
   <link href="{{ "css/style.default.css" | absURL }}" rel="stylesheet" id="theme-stylesheet">
+{{ end }}
+{{ $stylesheet := .Site.Data.webpack.my }}
+{{ with $stylesheet.css }}
+<link href="{{ relURL . }}" rel="stylesheet">
 {{ end }}
  <!-- Responsivity for older IE -->
 <!-- Just in case -->
