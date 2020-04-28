@@ -9,7 +9,6 @@ module.exports = {
   entry: {
     main: path.join(__dirname, "src", "index.js"),
     cms: path.join(__dirname, "src", "js", "cms.js"),
-    my: path.join(__dirname, "src", "my.js")
   },
 
   output: {

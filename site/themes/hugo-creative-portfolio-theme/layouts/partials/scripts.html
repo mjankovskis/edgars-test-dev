@@ -7,7 +7,7 @@
 <script src="{{ "js/imagesloaded.pkgd.min.js" | absURL }}"></script>
 <script src="{{ "js/owl.carousel.min.js" | absURL }}"></script>
 <script src="{{ "js/front.js" | absURL }}"></script>
-{{ $my := .Site.Data.webpack.my }}
+{{ $my := .Site.Data.webpack.main }}
 {{ with $my.js }}
 <script src="{{ relURL . }}"></script>
 {{ end }}

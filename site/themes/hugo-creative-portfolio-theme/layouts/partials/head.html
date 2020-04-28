@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
+<!--<link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">-->
+{{ $stylesheet := .Site.Data.webpack.main }}
+{{ with $stylesheet.css }}
+<link href="{{ relURL . }}" rel="stylesheet">
+{{ end }}
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
 <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/owl.carousel.css" | absURL }}">
@@ -14,11 +18,7 @@
 {{ with .Site.Params.style }}
   <link href="{{ printf "css/style.%s.css" . | absURL }}" rel="stylesheet" id="theme-stylesheet">
 {{ else }}
-  <link href="{{ "css/style.default.css" | absURL }}" rel="stylesheet" id="theme-stylesheet">
-{{ end }}
-{{ $stylesheet := .Site.Data.webpack.my }}
-{{ with $stylesheet.css }}
-<link href="{{ relURL . }}" rel="stylesheet">
+<!--  <link href="{{ "css/style.default.css" | absURL }}" rel="stylesheet" id="theme-stylesheet">-->
 {{ end }}
  <!-- Responsivity for older IE -->
 <!-- Just in case -->
