@@ -16,6 +16,8 @@
                       {{ end }}
                       {{ if eq .Params.showonlyimage true }}
                       <div class="box-masonry-hover-text-header">
+                      <a href="{{ .Permalink }}" class="box-masonry-show-only-image-full-link"></a>
+
                       {{ else }}
                       <div class="box-masonry-text">
                       {{ end }}

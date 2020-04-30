@@ -1,7 +1,8 @@
 @import "functions";
 @import "custom";
+@import "../../node_modules/photo-sphere-viewer/dist/photo-sphere-viewer.css";
 
-.content-column-content {
+.content-column .content-column-content {
     blockquote {
         color: $gray-400;
         border-left: 6px solid $gray-400;
@@ -56,7 +57,7 @@
 }
 
 
-.content-column-content {
+.content-column .content-column-content {
     font-family: Roboto,sans-serif;
     font-weight: 400;
     line-height: 1.5;
@@ -108,6 +109,7 @@
         background-color: $gray-100;
         border-radius: $border-radius-sm;
         padding: .125em .2em;
+        color: unset;
     }
 
     code[class*=language-], pre[class*=language-] {
@@ -172,16 +174,16 @@
 
     ul {
         li {
-            list-style-type: disc;
-        }
-        li:before {
-            content: "";
-            margin: 0;
+            list-style-type: disc !important;
+            &::before {
+                content: "" !important;
+                margin: 0 !important;
+            }
         }
     }
 }
 
-.content-column-content  {
+.content-column .content-column-content  {
     p, li {
         color: #0c344b;
     }
@@ -195,4 +197,18 @@
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+#viewer {
+    width: 100%;
+    height: 300px;
+}
+
+.box-masonry-show-only-image-full-link {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
